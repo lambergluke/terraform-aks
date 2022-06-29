@@ -38,7 +38,7 @@ jobs:
       uses: actions/upload-artifact@v3.0.0
       with:
         name: tfplan
-        path: terraform/tfplan
+        path: tfplan
     
   apply:
     needs: plan
@@ -58,7 +58,7 @@ jobs:
       uses: actions/download-artifact@v3.0.0
       with:
         name: tfplan
-        path: terraform/
+        path: .
 
     - name: Terraform Apply
       run: |
